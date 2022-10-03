@@ -12,6 +12,20 @@ import { AssetWithJpeg} from './types';
 export const Dependency = ({  symbol, logo_URIs, price  }: AssetWithJpeg) => {
   const imgSrc = logo_URIs ? logo_URIs.png || logo_URIs.svg || logo_URIs.jpeg ||  '' : ''
 
+  let formattedPrice
+
+   if(price) {
+    const priceArray = price?.toString().split('')
+    priceArray.splice(1, 0, '.')
+    formattedPrice = priceArray.join('').substring(0,4)
+  }
+
+  if(symbol.toLocaleLowerCase() === 'eth' && price) {
+    const priceArray = price?.toString().split('')
+    priceArray.splice(4, 0, '.')
+    formattedPrice = priceArray.join('').substring(0,7)
+  }
+
   return (
       <Stack
         isInline={true}
@@ -37,7 +51,7 @@ export const Dependency = ({  symbol, logo_URIs, price  }: AssetWithJpeg) => {
             <Image src={imgSrc} alt={symbol} width="30" height="30" />
             <Text fontSize="xl" fontWeight="semibold" textAlign="center">{symbol} </Text>
           </div>
-          <p style={{fontWeight: 'bold', fontSize: '24px'}}>{price}</p>
+          <p style={{fontWeight: 'bold', fontSize: '24px'}}>{formattedPrice}</p>
         </div>
         {symbol}
       </Stack>

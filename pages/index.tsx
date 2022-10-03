@@ -118,7 +118,7 @@ export default function Home() {
       setCw20Client(
         new HackCw20QueryClient(
           cosmwasmClient,
-          'stars10w8tguqxpgyfn38wqlldces6amg3vqt662rjudf2lwfz5rag9ykq0pem3g'
+          'stars18d7p7rq3fejdkajmnned098sah5me93u4kpkvjhv5tn8q2m65m2qtcvzcg'
         )
       );
     });
@@ -128,7 +128,6 @@ export default function Home() {
     const getAllValues = () => {
       cw20Client?.queryAllValues().then(val =>  {
         const splitVal = val[0].split(':')[1]
-        console.log('split val', splitVal)
         setPrices(JSON.parse(splitVal))
       });
     }
