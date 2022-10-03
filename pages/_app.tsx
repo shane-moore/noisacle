@@ -9,7 +9,6 @@ import { wallets } from '@cosmos-kit/keplr';
 import { chains, assets } from 'chain-registry';
 import { getSigningCosmosClientOptions } from 'stargaze-zone';
 import { GasPrice } from '@cosmjs/stargate';
-
 import { SignerOptions } from '@cosmos-kit/core';
 import { Chain } from '@chain-registry/types';
 
