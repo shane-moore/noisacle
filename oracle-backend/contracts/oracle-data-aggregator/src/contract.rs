@@ -143,6 +143,8 @@ pub fn execute_add_oracle_price(
         return Err(ContractError::AlreadySubmitted);
     }
 
+    HAS_SUBMITTED_IN_ROUND.save(deps.storage, (&update.round_id, &info.sender), &true)?;
+
     update.values.clone().into_iter().for_each(|v| {
         v.parse::<u128>().expect("Invalid value");
     });
