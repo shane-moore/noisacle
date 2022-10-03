@@ -1,0 +1,9 @@
+name = "oracle-backend"
+account_prefix = 'stars'
+gas_price = '0.04ustars'
+
+[networks.stargaze]
+chain_id = 'elgafar-1'
+network_variant = 'Shared'
+grpc_endpoint = 'http://grpc-1.elgafar-1.stargaze-apis.com:26660/'
+rpc_endpoint = 'https://rpc.elgafar-1.stargaze-apis.com'

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InstantiateMsg",
+  "type": "object",
+  "required": [
+    "nodes",
+    "nois_proxy",
+    "threshold"
+  ],
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "nois_proxy": {
+      "type": "string"
+    },
+    "threshold": {
+      "type": "string"
+    }
+  }
+}
