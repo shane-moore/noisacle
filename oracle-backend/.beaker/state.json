@@ -1,0 +1,33 @@
+{
+  "testnet": {
+    "counter": {
+      "code_id": 2235,
+      "addresses": {
+        "default": "osmo16fjpqur5c6ql8q6w92wtx7lt8fzf83tvj9e6es0hd83vqelxe5mqng7xt2"
+      },
+      "proposal": {
+        "store_code": null
+      }
+    },
+    "double_dice_roll": {
+      "code_id": 2244,
+      "addresses": {
+        "default": "osmo1h85xc4z0fl0l0y2gczvaxn7wurer6njsysz2g3ske8fgayg6uj2q6wqw90"
+      },
+      "proposal": {
+        "store_code": null
+      }
+    }
+  },
+  "stargaze": {
+    "oracle-data-aggregator": {
+      "code_id": 188,
+      "addresses": {
+        "default": "stars18d7p7rq3fejdkajmnned098sah5me93u4kpkvjhv5tn8q2m65m2qtcvzcg"
+      },
+      "proposal": {
+        "store_code": null
+      }
+    }
+  }
+}
